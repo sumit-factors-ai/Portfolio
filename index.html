@@ -5,12 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sumit - Backend Developer Portfolio</title>
     <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             color: #333;
             margin: 0;
             padding: 0;
+            animation: fadeIn 2s ease-in;
         }
         .container {
             width: 80%;
@@ -29,6 +35,10 @@
             text-decoration: none;
             text-transform: uppercase;
             font-size: 16px;
+            transition: color 0.3s ease;
+        }
+        header a:hover {
+            color: #0779e4;
         }
         header ul {
             padding: 0;
@@ -41,9 +51,9 @@
         .showcase {
             position: relative;
             min-height: 400px;
-            background: url('https://www.pexels.com/photo/photo-of-turned-on-laptop-computer-943096/') no-repeat center center/cover;
             text-align: center;
             color: #fff;
+            overflow: hidden;
         }
         .showcase::after {
             content: "";
@@ -57,6 +67,7 @@
         .showcase h1, .showcase p {
             position: relative;
             z-index: 2;
+            animation: fadeIn 2s ease-in;
         }
         .showcase h1 {
             margin-top: 100px;
@@ -69,6 +80,7 @@
         .main-content {
             padding: 20px;
             background: #fff;
+            animation: fadeIn 2s ease-in;
         }
         .skills, .projects {
             margin-bottom: 20px;
@@ -82,6 +94,13 @@
             margin-bottom: 10px;
             padding: 10px;
             font-size: 18px;
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .skills ul li:hover, .projects ul li:hover {
+            transform: translateX(10px);
+            background-color: #d1d1d1;
         }
         .contact {
             background: #333;
@@ -92,6 +111,13 @@
         .contact a {
             color: #0779e4;
             text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .contact a:hover {
+            color: #fff;
+        }
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
@@ -152,7 +178,6 @@
             <h2>Contact Me</h2>
             <p>You can reach me at:</p>
             <p>Email: <a href="mailto:sumitnegi05757@gmail.com">Sumitnegi05757@gmail.com</a></p>
-            <p>Phone: 8800638949</p>
             <p><a href="https://www.linkedin.com/in/sumiitnegi" target="_blank">LinkedIn</a> | <a href="https://github.com/sumitne" target="_blank">GitHub</a></p>
         </div>
     </footer>
